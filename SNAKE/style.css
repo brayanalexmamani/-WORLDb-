@@ -1,0 +1,117 @@
+/* Import Google font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+/*body -Son los comandos,tamaño o color
+ del fodo de tu pantalla o de tu proyecto<puedes
+editarlo a tu gusto>*/
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #a3e7a9;
+  background-image: linear-gradient(100deg, #000000, #00000020),
+		url('banner.jpg');
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+	height: 20rem;
+	background-size: cover;
+	background-position: center;
+}
+
+.wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  background: #293447;
+  background-image: linear-gradient(5deg, #000000, #00000020), 
+  url(IMG_20240219_210611.jpg);/*agregado solo para colocar el imagen de fondo del ecabesado del campo para los puntajes*/
+  box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+  background-position: auto;
+  background-size: 30rem;
+}
+
+.game-details {
+  color: #B8C6DC;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .play-board  - Es el fondo d la ventana o campo o espacio del gusano*/
+.play-board {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background: #1340a1;
+  /*blackground-image  - agregando imagen al campo del gusano*/
+  background-image: linear-gradient(100deg, #000000, #00000020),
+  url(IMG_20240219_130715.jpg);
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+  background-position: center;
+  background-size: 30rem;
+}
+
+/*.play-board .food - Es el color de la comida*/
+.play-board .food {
+  background: #FF003D;
+  border-radius: 5px;
+  background-image: url(apple-fondo-azul-oscuro_181705-860.jpg);
+  background-position: center;
+  background-size: 380%;
+}
+
+
+/*.play-board .head - Es el color del gusanito*/
+.play-board .head {
+  background: #60CBFF;
+  border-radius: 2px; /*Radius- Es la curbatura de cuepo que va tener el gusano*/
+  filter: blur(150%);
+  background-image:
+		url();    /*puedes pegar esta imgen en la url('IMG_20240219_122422.jpg') y ver cuvierto en el cuerpo del gusano con la imgen*/
+    background-size: cover;
+    background-position: center;
+}
+
+.controls {
+  display: none;
+  justify-content: space-between;
+}
+
+.controls i {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #B8C6DC;
+  width: calc(100% / 4);
+  cursor: pointer;
+  border-right: 1px solid #000000;
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+  .game-details {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+  .controls {
+    display: flex;
+  }
+  .controls i {
+    padding: 25px 0;/*tamaño del los 4 controles modo vertical abajo*/
+    font-size: 1rem;
+  }
+}
